@@ -707,9 +707,9 @@ task.spawn(function() LPH_NO_VIRTUALIZE(function()
                         if lplr.PlayerGui.PermanentGui.Event:FindFirstChild("EventLabel") then
                             for _, council in pairs(lplr.PlayerGui.PermanentGui.Event:GetChildren()) do
                                 if council.Text == "COUNCIL STARTING: CAST YOUR VOTE" then
-                                    kart.VehicleSeat.CFrame = wksp.CouncilHouse.No.CFrame + Vector3.new(0,3,0)
+                                    kart.VehicleSeat.CFrame = wksp.CouncilHouse.Yes.CFrame + Vector3.new(0,3,0)
                                     wait(1)
-                                    fireproximityprompt(wksp.CouncilHouse.No.ProximityPrompt, 1)
+                                    fireproximityprompt(wksp.CouncilHouse.Yes.ProximityPrompt, 1)
                                     wait(3)
                                     council.Text = "WATTY HUB ON TOP"
                                 end
@@ -845,9 +845,9 @@ task.spawn(function() LPH_NO_VIRTUALIZE(function()
                         wait(1.5)
                         fireproximityprompt(workspace.CouncilHouse.Yes.ProximityPrompt)
                     else
-                        Teleport(CFrame.new(wksp.CouncilHouse.No.Position + Vector3.new(0,5,0)))
+                        Teleport(CFrame.new(wksp.CouncilHouse.Yes.Position + Vector3.new(0,5,0)))
                         wait(0.5)
-                        fireproximityprompt(wksp.CouncilHouse.No.ProximityPrompt)
+                        fireproximityprompt(wksp.CouncilHouse.Yes.ProximityPrompt)
                     end
                 end
             end
