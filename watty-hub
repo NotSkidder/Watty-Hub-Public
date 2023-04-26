@@ -655,7 +655,6 @@ task.spawn(function() LPH_NO_VIRTUALIZE(function()
         if autofarmkart then
             for _,rice in pairs(wksp.Rice:GetChildren()) do
                 if rice and rice:FindFirstChild("PhysicalRice") and rice:FindFirstChild("PhysicalRice"):FindFirstChild("Middle") then
-                    if lplr.Team.Name ~= "Leader" or CheckPlayer(lplr) == false then break end
                     if wksp.Stores.FishingNet.CustomerSeats:FindFirstChild("1") == nil and wksp.Stores.FishingNet.Buttons:FindFirstChild("1") then
                         lplr.Character.Humanoid.Jump = true
                         wait(1)
