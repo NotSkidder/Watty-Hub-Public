@@ -683,7 +683,6 @@ task.spawn(function() LPH_NO_VIRTUALIZE(function()
                         wait(3)
                         fishingtool = "Best Fishing Net"
                     end
-                    if not CheckPlayer(lplr) then break end
                     if wksp.Stores.FishingNet.Buttons:FindFirstChild("1") then fishingtool = "Basic Fishing Net" end
                     if wksp.Stores.FishingNet.CustomerSeats:FindFirstChild("1") then fishingtool = "Basic Fishing Net" end
                     if wksp.Stores.FishingNet.CustomerSeats:FindFirstChild("2") then fishingtool = "Good Fishing Net" end
@@ -704,17 +703,6 @@ task.spawn(function() LPH_NO_VIRTUALIZE(function()
                     end
                     if autofarmkart == false then break end
                     if kart and kart:FindFirstChild("RightSickle") and kart:FindFirstChild("LeftSickle") and kart:FindFirstChild("VehicleSeat") then
-                        if lplr.PlayerGui.PermanentGui.Event:FindFirstChild("EventLabel") then
-                            for _, council in pairs(lplr.PlayerGui.PermanentGui.Event:GetChildren()) do
-                                if council.Text == "COUNCIL STARTING: CAST YOUR VOTE" then
-                                    kart.VehicleSeat.CFrame = wksp.CouncilHouse.Yes.CFrame + Vector3.new(0,3,0)
-                                    wait(1)
-                                    fireproximityprompt(wksp.CouncilHouse.Yes.ProximityPrompt, 1)
-                                    wait(3)
-                                    council.Text = "WATTY HUB ON TOP"
-                                end
-                            end
-                        end
                         if CheckPlayer(lplr) and lplr.Character.Humanoid.Health ~= 0 and kart and kart:FindFirstChild("RightSickle") and kart:FindFirstChild("LeftSickle") and kart:FindFirstChild("VehicleSeat") and rice and rice:FindFirstChild("PhysicalRice") and rice:FindFirstChild("PhysicalRice"):FindFirstChild("Middle") then
                             local v = rice.PhysicalRice.Middle
                             autofish = true
